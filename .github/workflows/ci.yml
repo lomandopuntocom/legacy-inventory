@@ -29,11 +29,11 @@ jobs:
 
       - name: Empaquetar aplicación
         if: success()
-        run: tar --exclude=legacy-inventory.tar.gz -czf legacy-inventory.tar.gz .
+        run: tar -czf /tmp/legacy-inventory.tar.gz .
 
       - name: Subir artefacto
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: inventory-app-artifact
-          path: legacy-inventory.tar.gz
+          path: /tmp/legacy-inventory.tar.gz
