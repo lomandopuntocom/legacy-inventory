@@ -7,7 +7,7 @@ variable "app_port" {
 }
 
 variable "instance_type" {
-  default = "t2.micro"
+  default = "t3.micro"
 }
 
 variable "iam_instance_profile" {
